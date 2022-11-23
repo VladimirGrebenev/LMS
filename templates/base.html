@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="ru">
 
@@ -8,13 +10,13 @@
     content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
   <!-- ChartJS -->
-  <link rel="stylesheet" href="/static/css/Chart.min.css">
+  <link rel="stylesheet" href="{% static 'css/Chart.min.css' %}">
 
   <!-- FontAwesome -->
-  <link rel="stylesheet" href="/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="{% static 'css/fontawesome.all.min.css' %}">
 
   <title>Welcome to Braniac!</title>
 </head>
@@ -22,57 +24,6 @@
 <body>
 
   {% include 'includes/main_menu.html' %}
-
-  <div class="container-md">
-      <a class="navbar-brand" href="index.html">
-        <img src="/static/img/logo.png" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="news.html">Новости</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="courses_list.html">Курсы</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="ddProfile"
-              role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              Профиль
-            </a>
-            <div class="dropdown-menu" aria-labelledby="ddProfile">
-              <a class="dropdown-item" href="#">Редактировать
-                профиль</a>
-              <a class="dropdown-item" href="#">Мои курсы</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Модерация</a>
-              <a class="dropdown-item" href="#">Административный
-                раздел</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Выход</a>
-            </div>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="contacts.html">Контакты</a>
-          </li>
-        </ul>
-        <span><a href="#">🇷🇺</a> <i class="fas fa-grip-lines-vertical"></i> <a
-            href="#">🇬🇧</a></span>
-      </div>
-    </div>
-  </nav>
-
-
-
-
 
   <div class="container-md">
 
@@ -160,15 +111,15 @@
 
   <!-- JavaScript section -->
   <!-- Bootstrap -->
-  <script src="/static/js/jquery-3.6.0.min.js"></script>
-  <script src="/static/js/popper.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
   <!-- ChartJs -->
-  <script src="/static/js/Chart.min.js"></script>
+  <script src="{% static 'js/Chart.min.js' %}"></script>
 
   <!-- FontAwesome -->
-  <script src="/static/js/fontawesome.all.min.js"></script>
+  <script src="{% static 'js/fontawesome.all.min.js' %}"></script>
 
 
 
