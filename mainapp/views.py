@@ -16,6 +16,7 @@ class NewsPageView(TemplateView):
         # Create your own data
         context["news_title"] = "Громкий новостной заголовок"
         context["news_preview"] = "Предварительное описание, которое заинтересует каждого"
+<<<<<<< HEAD
         context["range"] = range(5)
         context["datetime_obj"] = datetime.now()
         return context
@@ -25,6 +26,8 @@ class NewsWithPaginatorView(NewsPageView):
     def get_context_data(self, page, **kwargs):
         context = super().get_context_data(page=page, **kwargs)
         context["page_num"] = page
+=======
+>>>>>>> de2bc33 (lesson_3 Template inhereting)
         return context
 
 
