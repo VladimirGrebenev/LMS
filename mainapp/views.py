@@ -20,6 +20,7 @@ class NewsPageView(TemplateView):
 <<<<<<< HEAD
         context["range"] = range(5)
         context["datetime_obj"] = datetime.now()
+<<<<<<< HEAD
         return context
 
 
@@ -32,6 +33,8 @@ class NewsWithPaginatorView(NewsPageView):
 =======
         context["range"] = range(5)
 >>>>>>> 8b40449 (lesson_3 Loops in templates)
+=======
+>>>>>>> 50e23b6 (lesson_3 Template's filters)
         return context
 
 
