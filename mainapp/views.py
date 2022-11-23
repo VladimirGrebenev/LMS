@@ -17,6 +17,7 @@ class NewsPageView(TemplateView):
         context["news_title"] = "Громкий новостной заголовок"
         context["news_preview"] = "Предварительное описание, которое заинтересует каждого"
 <<<<<<< HEAD
+<<<<<<< HEAD
         context["range"] = range(5)
         context["datetime_obj"] = datetime.now()
         return context
@@ -28,6 +29,9 @@ class NewsWithPaginatorView(NewsPageView):
         context["page_num"] = page
 =======
 >>>>>>> de2bc33 (lesson_3 Template inhereting)
+=======
+        context["range"] = range(5)
+>>>>>>> 8b40449 (lesson_3 Loops in templates)
         return context
 
 
