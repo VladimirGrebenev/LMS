@@ -15,10 +15,13 @@
 =======
 >>>>>>> de2bc33 (lesson_3 Template inhereting)
 
+{% with range as double_range %}
+
 <div class="row">
 
   <div class="col-lg-8">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     {% for i in double_range %}
@@ -32,6 +35,9 @@
 =======
     {% for i in range %}
 >>>>>>> 8b40449 (lesson_3 Loops in templates)
+=======
+    {% for i in double_range %}
+>>>>>>> a8001a8 (lesson_3 Tag with)
     <div class="card my-2">
       <div class="card-body">
         <h5 class="card-title">{{ news_title }}</h5>
@@ -121,17 +127,30 @@
   <nav aria-label="Page navigation example">
     <ul class="pagination">
       <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+<<<<<<< HEAD
       <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' 1 %}?param1=foobar">1</a></li>
       <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' page=2 %}">2</a></li>
       {# <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' three %}">3</a></li> #}
+=======
+
+      {% for i in double_range %}
+      <li class="page-item"><a class="page-link" href="#">{{ i }}</a></li>
+      {% endfor %}
+
+>>>>>>> a8001a8 (lesson_3 Tag with)
       <li class="page-item"><a class="page-link" href="#">Next</a></li>
     </ul>
   </nav>
 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 {% endwith %}
 
 =======
 >>>>>>> de2bc33 (lesson_3 Template inhereting)
+=======
+{% endwith %}
+
+>>>>>>> a8001a8 (lesson_3 Tag with)
 {% endblock content %}
