@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 from django.shortcuts import get_object_or_404
+=======
+from datetime import datetime
+
+>>>>>>> 9044c7d (Lesson 3 (#2))
 from django.views.generic import TemplateView
 
 from mainapp import models as mainapp_models
@@ -15,6 +20,7 @@ class NewsPageView(TemplateView):
         # Get all previous data
         context = super().get_context_data(**kwargs)
         # Create your own data
+<<<<<<< HEAD
 <<<<<<< HEAD
         context["news_title"] = "Громкий новостной заголовок"
         context["news_preview"] = "Предварительное описание, которое заинтересует каждого"
@@ -38,9 +44,26 @@ class NewsWithPaginatorView(NewsPageView):
 =======
 >>>>>>> 50e23b6 (lesson_3 Template's filters)
 =======
+=======
+>>>>>>> 949da51 (Lesson 3 (#2))
         context["news_qs"] = mainapp_models.News.objects.all()[:5]
 >>>>>>> 202c2e9 (lesson_4 Display model's data)
         return context
+=======
+        context["news_title"] = "Громкий новостной заголовок"
+        context["news_preview"] = "Предварительное описание, которое заинтересует каждого"
+        context["range"] = range(5)
+        context["datetime_obj"] = datetime.now()
+        return context
+
+
+class NewsWithPaginatorView(NewsPageView):
+    def get_context_data(self, page, **kwargs):
+        context = super().get_context_data(page=page, **kwargs)
+        context["page_num"] = page
+        return context
+
+>>>>>>> 9044c7d (Lesson 3 (#2))
 
 
 class NewsPageDetailView(TemplateView):

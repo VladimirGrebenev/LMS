@@ -11,7 +11,11 @@
             "program": "${workspaceFolder}/manage.py",
             "args": [
                 "runserver",
+<<<<<<< HEAD
                 "127.0.0.1:8000",
+=======
+                "0.0.0.0:8000"
+>>>>>>> 9044c7d (Lesson 3 (#2))
             ],
             "django": true,
             "justMyCode": true
