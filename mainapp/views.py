@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.views.generic import TemplateView
 
 from mainapp import models as mainapp_models
@@ -11,10 +13,14 @@ class NewsPageView(TemplateView):
     template_name = "mainapp/news.html"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31f4ee1 (Lesson 3 (#2))
     def get_context_data(self, **kwargs):
         # Get all previous data
         context = super().get_context_data(**kwargs)
         # Create your own data
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         context["news_title"] = "Громкий новостной заголовок"
@@ -45,6 +51,8 @@ class NewsWithPaginatorView(NewsPageView):
 >>>>>>> 202c2e9 (lesson_4 Display model's data)
         return context
 =======
+=======
+>>>>>>> 31f4ee1 (Lesson 3 (#2))
         context["news_title"] = "Громкий новостной заголовок"
         context["news_preview"] = "Предварительное описание, которое заинтересует каждого"
         context["range"] = range(5)
@@ -58,6 +66,7 @@ class NewsWithPaginatorView(NewsPageView):
         context["page_num"] = page
         return context
 
+<<<<<<< HEAD
 >>>>>>> 9044c7d (Lesson 3 (#2))
 
 
@@ -71,6 +80,8 @@ class NewsPageDetailView(TemplateView):
 
 =======
 >>>>>>> e422349 (Lesson 3 (#2))
+=======
+>>>>>>> 31f4ee1 (Lesson 3 (#2))
 
 class CoursesListView(TemplateView):
     template_name = "mainapp/courses_list.html"
