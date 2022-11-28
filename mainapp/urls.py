@@ -12,6 +12,7 @@ urlpatterns = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     path("news/<int:page>/", views.NewsWithPaginatorView.as_view(), name="news_paginator"),
 =======
 >>>>>>> cb71671 (lesson_3 Urls in templates)
@@ -37,6 +38,10 @@ urlpatterns = [
     path("courses/", views.CoursesPageView.as_view(), name="courses"),
 >>>>>>> 9044c7d (Lesson 3 (#2))
 >>>>>>> 949da51 (Lesson 3 (#2))
+=======
+    path("news/<int:page>/", views.NewsWithPaginatorView.as_view(), name="news_paginator"),
+    path("courses/", views.CoursesPageView.as_view(), name="courses"),
+>>>>>>> e422349 (Lesson 3 (#2))
     path("contacts/", views.ContactsPageView.as_view(), name="contacts"),
     path("doc_site/", views.DocSitePageView.as_view(), name="doc_site"),
     path("login/", views.LoginPageView.as_view(), name="login"),
