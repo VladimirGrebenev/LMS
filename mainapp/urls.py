@@ -10,6 +10,7 @@ urlpatterns = [
     path("news/", views.NewsPageView.as_view(), name="news"),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     path("news/<int:page>/", views.NewsWithPaginatorView.as_view(), name="news_paginator"),
 =======
 >>>>>>> cb71671 (lesson_3 Urls in templates)
@@ -17,6 +18,15 @@ urlpatterns = [
     path("news/<int:page>/", views.NewsWithPaginatorView.as_view(), name="news_paginator"),
 >>>>>>> b00f658 (lesson_3 Args in url)
     path("courses/", views.CoursesPageView.as_view(), name="courses"),
+=======
+    path("news/<int:pk>/", views.NewsPageDetailView.as_view(), name="news_detail"),
+    path("courses/", views.CoursesListView.as_view(), name="courses"),
+    path(
+        "courses/<int:pk>/",
+        views.CoursesDetailView.as_view(),
+        name="courses_detail",
+    ),
+>>>>>>> 202c2e9 (lesson_4 Display model's data)
     path("contacts/", views.ContactsPageView.as_view(), name="contacts"),
     path("doc_site/", views.DocSitePageView.as_view(), name="doc_site"),
     path("login/", views.LoginPageView.as_view(), name="login"),

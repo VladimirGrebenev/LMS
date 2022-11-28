@@ -44,7 +44,11 @@
   <link rel="stylesheet" href="{% static 'css/fontawesome.all.min.css' %}">
 >>>>>>> 77efc67 (lesson_3 Tag static)
 
-  <title>Welcome to Braniac!</title>
+  <title>
+    {% block title %}
+    Welcome to Braniac!
+    {% endblock title %}
+  </title>
 </head>
 
 <body>
@@ -166,6 +170,7 @@
           <li><a href="#">Документация по API</a></li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <li><a href="{% url 'mainapp:doc_site' %}">Документация по сайту</a></li>
 =======
           <li><a href="doc_site.html">Документация по сайту</a></li>
@@ -173,6 +178,10 @@
 =======
           <li><a href="{% url 'mainapp:doc_site' %}">Документация по сайту</a></li>
 >>>>>>> cb71671 (lesson_3 Urls in templates)
+=======
+          <li><a href="{% url 'mainapp:doc_site' %}">Документация по сайту</a>
+          </li>
+>>>>>>> 202c2e9 (lesson_4 Display model's data)
         </ul>
         </p>
       </div>
