@@ -247,3 +247,6 @@ fabric.properties
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Django and API secretkeys
+.env
