@@ -11,18 +11,19 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-dot_env = BASE_DIR / '.env'
+dot_env = BASE_DIR / ".env"
 load_dotenv(dotenv_path=dot_env)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,19 +81,19 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if os.getenv('ENV_TYPE') != 'local':
+if os.getenv("ENV_TYPE") != "local":
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'geekshop',
-            'USER': 'postgres',
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": "geekshop",
+            "USER": "postgres",
         }
     }
 else:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
         }
     }
 
@@ -140,9 +141,7 @@ STATIC_URL = "/static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-if os.getenv('ENV_TYPE') != 'local':
-    STATIC_ROOT = BASE_DIR / 'static'
+if os.getenv("ENV_TYPE") != "local":
+    STATIC_ROOT = BASE_DIR / "static"
 else:
-    STATICFILES_DIRS = (
-        BASE_DIR / 'static/',
-    )
+    STATICFILES_DIRS = (BASE_DIR / "static/",)

@@ -13,6 +13,7 @@ urlpatterns = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     path("news/<int:page>/", views.NewsWithPaginatorView.as_view(), name="news_paginator"),
 =======
 >>>>>>> cb71671 (lesson_3 Urls in templates)
@@ -23,6 +24,8 @@ urlpatterns = [
 =======
 =======
 >>>>>>> 949da51 (Lesson 3 (#2))
+=======
+>>>>>>> c323222 (lesson_4 Display model's data dotenv secretkey)
     path("news/<int:pk>/", views.NewsPageDetailView.as_view(), name="news_detail"),
     path("courses/", views.CoursesListView.as_view(), name="courses"),
     path(
@@ -30,6 +33,7 @@ urlpatterns = [
         views.CoursesDetailView.as_view(),
         name="courses_detail",
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 202c2e9 (lesson_4 Display model's data)
 =======
@@ -42,6 +46,8 @@ urlpatterns = [
     path("news/<int:page>/", views.NewsWithPaginatorView.as_view(), name="news_paginator"),
     path("courses/", views.CoursesPageView.as_view(), name="courses"),
 >>>>>>> e422349 (Lesson 3 (#2))
+=======
+>>>>>>> c323222 (lesson_4 Display model's data dotenv secretkey)
     path("contacts/", views.ContactsPageView.as_view(), name="contacts"),
     path("doc_site/", views.DocSitePageView.as_view(), name="doc_site"),
     path("login/", views.LoginPageView.as_view(), name="login"),

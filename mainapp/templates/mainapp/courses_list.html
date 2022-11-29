@@ -8,19 +8,25 @@
 {% load static %}
 >>>>>>> 77efc67 (lesson_3 Tag static)
 
+{% block title %}
+Курсы
+{% endblock title %}
+
 {% block content %}
 
 <div class="row justify-content-center mt-3">
 
 
+  {% for item in objects %}
   <div class="card col-sm-12 col-md-6 col-lg-4 border-0">
-    <a href="#">
-      <img src="{% static 'img/course001.jpg' %}" class="card-img-top" alt="...">
+    <a href="{% url 'mainapp:courses_detail' pk=item.pk %}">
+      <img src="{% static item.cover %}" class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title text-center">Web Python</h5>
+        <h5 class="card-title text-center">{{ item.name }}</h5>
       </div>
     </a>
   </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -232,6 +238,9 @@
     </a>
   </div>
 
+=======
+  {% endfor %}
+>>>>>>> c323222 (lesson_4 Display model's data dotenv secretkey)
 
 </div>
 <div class="row justify-content-center align-items-center mt-3 mb-n3">
