@@ -142,3 +142,8 @@ if os.getenv("ENV_TYPE") != "local":
     STATIC_ROOT = BASE_DIR / "static"
 else:
     STATICFILES_DIRS = (BASE_DIR / "static/",)
+
+# Media files
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = BASE_DIR / "media"
