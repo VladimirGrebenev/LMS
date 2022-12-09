@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static markdownify crispy_forms_tags cache %}
+{% load static markdownify crispy_forms_tags cache i18n%}
 
 {% block title %}
 {{ course_object.name }}
@@ -48,12 +48,12 @@
   </div>
   <div class="col-sm-12 d-md-none order-3 order-sm-3">
     <p class="text-center">
-      <small class="text-uppercase">цена</small><br>
+      <small class="text-uppercase">{% translate "price" %}</small><br>
       <span style="font-size: 30pt;">
         {{ course_object.cost}}
       </span><br>
       <a href="#" class="btn btn-outline-primary btn-block"
-        role="button">Купить</a>
+        role="button">{% translate "Buy" %}</a>
     </p>
   </div>
 </div>
