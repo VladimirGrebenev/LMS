@@ -16,6 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 dot_env = BASE_DIR / ".env"
 load_dotenv(dotenv_path=dot_env)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -90,17 +91,6 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -139,7 +129,7 @@ SOCIAL_AUTH_VK_OAUTH2_SECRET = os.getenv("AUTH_VK_OAUTH2_SECRET")
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ru-ru"
 
 TIME_ZONE = "UTC"
 
@@ -150,23 +140,35 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
+# Параметры развертывания на сервере / локальные параметры для БД и пути до статики
 
-STATIC_URL = "/static/"
+STATIC_URL = "static/"
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+if os.getenv("ENV_TYPE") != "local":
+    STATIC_ROOT = BASE_DIR / "static"
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": "braniac",
+            "USER": "django",
+            "PASSWORD": "geekbrains",
+            "HOST": "127.0.0.1",
+            "PORT": "5432",
+        }
+    }
+else:
+    STATICFILES_DIRS = (BASE_DIR / "static/",)
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 # Media files
 MEDIA_URL = "/media/"
-
 MEDIA_ROOT = BASE_DIR / "media"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
